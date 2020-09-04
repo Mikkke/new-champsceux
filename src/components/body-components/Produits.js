@@ -23,6 +23,7 @@ const Produits = props => {
     //console.log("id du modal :>> ", id);
     Axios.get(`${initialUrl}/${id}`)
       .then(res => {
+        console.log("res.data :>> ", res.data);
         setProduitInfos(res.data);
         setLoading(false);
       })
