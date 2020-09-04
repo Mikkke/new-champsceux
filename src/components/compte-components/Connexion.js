@@ -17,10 +17,10 @@ const schema = yup.object().shape({
     .required("ce champs est requis")
 });
 
-/* const apiBaseUrl = process.env.REACT_APP_BASE_API;
+const apiBaseUrl = process.env.REACT_APP_BASE_API;
 const initialUrl = `${apiBaseUrl}/api/profil/login`;
 console.log("apiBaseUrl :>> ", apiBaseUrl);
-console.log("initialUrl :>> ", initialUrl); */
+console.log("initialUrl :>> ", initialUrl);
 
 // eslint-disable-next-line react/prop-types
 const Connexion = props => {
