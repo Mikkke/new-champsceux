@@ -23,6 +23,7 @@ const apiBaseUrl = env.REACT_APP_BASE_API;
 const initialUrl = `${apiBaseUrl}/api/profil/login`;
 console.log("apiBaseUrl :>> ", apiBaseUrl);
 console.log("initialUrl :>> ", initialUrl);
+console.log("env :>> ", env);
 
 // eslint-disable-next-line react/prop-types
 const Connexion = props => {
