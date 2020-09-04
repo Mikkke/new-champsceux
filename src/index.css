@@ -1,0 +1,262 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  
+  font-family: 'Montserrat',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+accueil {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-image: url("./assets/accueil-farm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+accueil::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.53);
+  }
+  .accueil .text-div {
+    color: white;
+    
+  }
+
+text-div {
+  position: absolute;
+  left: 250px;
+  width: 350px;
+  letter-spacing: 2px;
+}
+text-div h2{
+padding: 20px;
+}
+
+
+text-div .btn {
+  text-align: center;
+font-size: 20px;
+padding: 10px;
+border-radius: 30px;
+background-color: rgba(255, 255, 255, 0.3);
+color: white;
+font-weight: bold;
+margin-left: 21px;
+transform: scale(1);
+transition: transform 0.4s;
+
+}
+text-div .btn:hover {
+  transform: scale(1.12);
+  
+}
+
+
+produit-div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+ 
+  
+}
+
+my-card {
+  width: 200px;
+  height: 300px;
+  padding: 40px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.651);
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+image {
+  width: 300px;
+  height: 200px;
+}
+
+contact {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  background-image: url("./assets/plantation.jpg");
+  color: aliceblue;
+  
+}
+contact h1 {
+  padding-top: 20px;
+}
+container-contact {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+form-div {
+  width: 100%;
+  height: 80%;
+  padding: 20px;
+
+}
+
+form-div form {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+}
+form-div form label {
+  font-size: 20px;
+}
+
+form-div form input {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: hsla(0,0%,100%,.95);
+}
+
+form-div form select {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: hsla(0,0%,100%,.95);
+}
+
+form-div form textarea {
+  width: 400px;
+  height: 150px;
+  border-radius: 5px;
+  outline: none;
+  background-color: hsla(0,0%,100%,.95);
+}
+
+form-div form .send {
+  width: 200px;
+  margin-top: 10px;
+  outline: none;
+  background: #043e6e;
+  color: white;
+  transform: scale(1);
+  transition: transform 0.4s;
+  border: 1px solid #043e6e;
+  font-size: 20px;
+}
+form-div form .send:hover {
+  transform: scale(1.15);
+}
+
+reseaux {
+  display: flex;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+}
+reseaux h1 {
+  font-size: 20px;
+}
+reseaux h2 {
+  font-size: 20px;
+}
+reseaux a {
+  font-size: 30px;
+}
+social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+social insta {
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.4s;
+
+}
+
+social insta:hover {
+  transform: rotate(-12deg) scale(1.10);
+  color: #C51464;
+}
+
+social facebook {
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.4s;
+
+}
+
+social facebook:hover {
+  transform: rotate(12deg) scale(1.10);
+  color: #4267B2;
+}
+
+panier {
+  width: 100%;
+  height: 90vh;
+}
+
+sign-div-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+sign-div-form form{
+  font-size: 15px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,.651);
+
+}
+
+sign-div-form form input {
+  height: 20px;
+  width: 300px;
+}
+
+sign-div-form form label {
+  padding: 10px 0 10px 0;
+}
+
+

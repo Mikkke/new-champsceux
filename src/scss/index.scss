@@ -1,0 +1,651 @@
+@import "./compteComponent.scss";
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  .accueil{
+    display: flex;
+    align-items: center;
+    height: calc(110vh - 10px);
+    width: 100%;
+    background-image: url("../assets/tracteur.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .text-div{
+      position: absolute;
+      left: 10%;
+      color: white;
+      width: 25%;
+      font-size: 25px;
+      .btn {
+        text-align: center;
+        border: 1px solid white;
+        border-radius: 25px;
+        padding: 10px;
+        width: 200px;
+        overflow: hidden;
+        background: rgba(248, 246, 246, 0);
+        transition: transform 400ms;
+        &:hover {
+         transform: scale(1.2);
+         
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+        }
+        
+      }
+    }
+  }
+
+.produit-div {
+
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 90px;
+  background: rgb(248, 246, 246);
+  .my-card{
+    display: flex;
+    width: 15rem;
+    min-height: 300px;
+    /* padding: 15px; */
+    margin: 20px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    background: white;
+    border-radius: 8px;
+    transition-property: box-shadow, transform;
+    &:hover,&:active,&:focus {
+      box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+      .card {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+          height: 10rem;
+          border-radius: 8px 8px 0 0;
+        }
+        h1 {
+          font-size: 1.2rem;
+        }
+        p {
+          margin: 0.5rem;
+        }
+        button {
+          margin: 5px;
+          height: 30px;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid black;
+          background: white;
+          cursor: pointer;
+          &:hover {
+            background: rgb(211, 137, 19);
+            color: white;
+          }
+        }
+      }
+    }
+}
+
+.contact {
+  background-image: url("../assets/plantation.jpg");
+  width: 100%;
+  height: calc(110vh - 10px);
+  color: white;
+  margin-top: 62px;
+  h1 {
+  padding-top: 1.5em;
+  text-align: center;
+  }
+  .container-contact {
+    display: flex;
+    height: 65%;
+    /* padding: 30px; */
+    justify-content: space-around;
+    .form-div {
+      display: flex;
+      flex-direction: column;
+      /* width: 30%; */
+      label {
+        font-size: 1em;
+        padding: 9px;
+      }
+      input {
+        width: 400px;
+        height: 30px;
+        font-size: 20px;
+        outline : none
+      }
+      select {
+        width: 400px;
+        height: 30px;
+        font-size: 20px;
+        outline: none;
+      }
+      textarea {
+        width: 400px;
+        height: 180px;
+        font-size: 20px;
+        outline: none;
+      }
+      .send {
+        margin-top: 20px;
+        width: 100px;
+        height: 45px;
+        background: #043D6E;
+        color: white;
+        border: 1px solid #043D6E;
+        outline:none;
+        transition: transform 400ms;
+        align-self: center;
+        &:hover {
+          transform: scale(1.13);
+        }
+      }
+    }
+    .reseaux {
+      text-align: center;
+      /* width: 50%; */
+      /* padding: 30px; */
+      padding-top: 15px;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+      .social {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+
+/*.compte-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  height: calc(88vh - 10px);
+  border: 3px solid yellow;
+  font-size: 1em;
+  .link-compte-div {
+   
+    a{
+      padding: 10px;
+      margin: 30px;
+      text-decoration: none;
+      color: #033D6F;
+      border: 1px solid #033D6F;
+      transition: color 500ms;
+      border-radius: 5px;
+       box-shadow: ; 
+      &:hover {
+        color: white;
+        background: #033D6F;
+      }
+    }
+  }
+  .compte-sous-div{  
+    
+    border: 1px solid green;
+    background: green;
+    height: 80%;
+    width: 100%;
+
+  }
+}*/
+
+.connexion-div {
+  background-image: url("../assets/cloture.jpg");
+  background-size: cover;
+  width: 100%;
+  height: calc(110vh - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 62px; */
+ .wrap
+ {
+   max-width: 350px;
+   border-radius: 20px;
+   /* margin: auto; */
+   background: rgba($color: #000000, $alpha: 0.8);
+   box-sizing: border-box;
+   padding: 40px;
+   color: #fff;
+   margin-top: 100px;
+   span {
+    font-size: 1.5rem;
+    color: red;
+  }
+   h2 {
+     text-align: center;
+   }
+   form {
+     input {
+       width: 100%;
+       box-sizing: border-box;
+       padding: 12px 5px;
+       background: rgba($color: #000000, $alpha: 0.10);
+       outline: none;
+       border: none;
+       /* border-bottom: 1px solid #fff; */
+       color: #fff;
+       border-radius: 5px;
+       margin: 5px;
+       font-size: 20px;
+       
+     }
+     button {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 0;
+      margin-top: 30px;
+      outline: none;
+      border: none;
+      background: #033d6f;
+      /* opacity: 0.7; */
+      color: #fff;
+      border-radius: 5px;
+      font-size: 20px;
+      transition: all 400ms;
+      &:hover {
+        color: #033d6f;
+
+        background: white;
+        /* opacity: 0.7; */
+        border: 1px solid #033d6f;
+      }
+   }
+     
+   }
+   p {
+     font-size: 1.1em;
+    a {
+      color: #fff
+    }
+  }
+ }
+}
+
+
+.inscription-div {
+  background-image: url("../assets/plante.jpg");
+  background-size: cover;
+  width: 100%;
+  height: calc(110vh - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 62px; */
+ .wrap-inscription
+ {
+   max-width: 350px;
+   border-radius: 20px;
+   /* margin: auto; */
+   background: rgba($color: #000000, $alpha: 0.8);
+   box-sizing: border-box;
+   padding: 40px;
+   color: #fff;
+   margin-top: 100px;
+   h2 {
+     text-align: center;
+   }
+   span {
+     font-size: 1.5rem;
+     color: red;
+   }
+   form {
+     input {
+       width: 100%;
+       box-sizing: border-box;
+       padding: 10px 5px;
+       background: rgba($color: #000000, $alpha: 0.10);
+       outline: none;
+       border: none;
+       /* border-bottom: 1px solid #fff; */
+       color: #fff;
+       border-radius: 5px;
+       margin: 5px;
+       font-size: 20px;
+       
+     }
+
+     .inputBox {
+       display: flex;
+       flex-direction: column;
+       padding: 12px 5px;
+       box-sizing: border-box;
+       background: rgba($color: #000000, $alpha: 0.10);
+       label {
+        color: #fff;
+        font-size: 1.4rem;
+       }
+       select {
+        padding: 12px 5px;
+        font-size: 1rem;
+       }
+     }
+     button {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 0;
+      margin-top: 30px;
+      outline: none;
+      border: none;
+      background: #033d6f;
+      /* opacity: 0.7; */
+      color: #fff;
+      border-radius: 5px;
+      font-size: 20px;
+      transition: all 400ms;
+      &:hover {
+        color: #033d6f;
+        background: white;
+        /* opacity: 0.7; */
+        border: 1px solid #033d6f;
+      }
+   }
+     
+   }
+   p {
+     font-size: 1.1em;
+    a {
+      color: #fff
+    }
+  }
+ }
+}
+
+.forget-password {
+  background-image: url("../assets/jardinner.jpg");
+  background-size: cover;
+  width: 100%;
+  height: calc(110vh - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrap
+  {
+    max-width: 350px;
+    border-radius: 20px;
+    /* margin: auto; */
+    background: rgba($color: #000000, $alpha: 0.8);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #fff;
+    margin-top: 100px;
+    h2 {
+      text-align: center;
+    }
+    form {
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 5px;
+        background: rgba($color: #000000, $alpha: 0.10);
+        outline: none;
+        border: none;
+        /* border-bottom: 1px solid #fff; */
+        color: #fff;
+        border-radius: 5px;
+        margin: 5px;
+        font-size: 20px;
+        
+      }
+      button {
+       width: 100%;
+       box-sizing: border-box;
+       padding: 10px 0;
+       margin-top: 30px;
+       outline: none;
+       border: none;
+       background: #033d6f;
+       /* opacity: 0.7; */
+       color: #fff;
+       border-radius: 5px;
+       font-size: 20px;
+       transition: all 400ms;
+       &:hover {
+         color: #033d6f;
+ 
+         background: white;
+         /* opacity: 0.7; */
+         border: 1px solid #033d6f;
+       }
+    }
+      
+    }
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width : 741px) {
+  
+  .accueil{
+  
+  
+    background-position: left !important;
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .contact {
+    h1 {
+      padding-top: 0;
+    }
+    
+    .container-contact {
+      
+    flex-direction: column;
+      .form-div {
+        font-size: 20px;
+        margin-top: 160px;
+        align-self: center;
+
+        label {
+
+          width: 130px;
+          height: 18px;
+        }
+        .name {
+          width: 250px;
+          height: 25px;
+        }
+        .mail {
+          width: 250px;
+          height: 25px;
+        }
+        .select {
+          background: white;
+          width: 252px;
+          height: 25px;
+        }
+        .textarea {
+          width: 250px;
+        }
+
+      }
+      .reseaux {
+        h1 {
+          font-size: 1em;
+          padding: 0px;
+        }
+        p {
+          font-size: 1.2em;
+
+        }
+        h2 {
+          font-size: 1em;
+        }
+      }
+    }
+
+  }
+  }
+
+  :root {
+    --white-color: #ffffff;
+    --light-grey-color: #EAE8E8;
+    --light-green-color: #1ecc78;
+    --green-color: #0cb765;
+    --red-color: #EB1D27;
+    --blue-color: #4f78a4;
+    --dark-red-color: #d31017;
+    --dark-grey-color: #363636;
+    --black-color: #333030;
+    --deep-black-color: #000000;
+  }
+
+
+
+  .modalBackground {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalContainer {
+    flex: 0 1 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  .modalHeader {
+    background-color: black/* var(--dark-red-color) */;
+    padding: 15px;
+    color: var(--white-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .modalBody {
+    padding: 30px 10px;
+    background: var(--white-color);
+    height: 400px;
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      width: 20rem;
+      height: 20rem;
+      @media  screen and (max-width : 741px) {
+        width: 6rem;
+        height: 6rem;
+        }
+    }
+    .modelBody--container  {
+      @media  screen and (max-width : 741px) {
+        padding: 0;
+        }
+    }
+    @media  screen and (max-width : 741px) {
+      height: 200px;
+      width: 300px;
+      }
+  }
+
+  .modalFooter {
+    background-color: var(--white-color);
+    padding: 10px;
+    color: var(--white-color);
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--light-grey-color);
+  }
+
+  .modalBtn {
+    //background: var(--light-grey-color);
+    padding: 9px 5px;
+    width: 90px;
+    color: var(--deep-black-color);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    //border: 1px solid var(--light-grey-color);
+    margin: 0;
+    font-size: 15px;
+    transition: color 400ms;
+  }
+  .__green {
+    &:hover {
+      color: rgb(53, 158, 53);
+    }
+  }
+  .__red {
+    &:hover {
+      color: rgb(194, 20, 20);
+    }
+  }
+
+
+  .form-history--product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20rem;
+    width: 20rem;
+
+    input {
+      height: 2rem;
+      font-size: 1.3rem;
+      outline: none;
+      @media  screen and (max-width : 741px) {
+        //height: 1rem;
+        font-size: 0.6rem;
+      }
+      
+    }
+    textarea {
+      font-size: 1.3rem;
+      height: 7rem;
+      outline: none;
+      @media  screen and (max-width : 741px) {
+        height: 5rem;
+        font-size: 1rem;
+      }
+    }
+    
+    @media  screen and (max-width : 741px) {
+      height: 15rem;
+      width: 10rem;
+ 
+    }
+  }

@@ -1,0 +1,244 @@
+
+
+.main-compte {
+    background: white; 
+    display: flex;
+    flex-direction: row;
+
+    @media  screen and (max-width : 741px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .navCompte{
+        background: white;
+        margin-top: 60px;
+        height: calc(110vh - 10px);
+        font-size: 1em;
+        display: flex;
+        @media  screen and (max-width : 741px) {
+            height: 100px;
+        }
+            aside {
+        width: 200px;
+        height: 100%;
+        @media  screen and (max-width : 741px) {
+            width: 100%;
+        }
+
+    
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 30%;
+            margin-top: 100px;
+            @media  screen and (max-width : 741px) {
+                display: flex;
+                flex-direction: row;
+                margin-top: 0;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+                padding: 15px;
+                text-align: center;
+                background: rgb(190, 188, 188);
+                margin: 7px;
+                @media  screen and (max-width : 741px) {
+                    font-size: 0.8em;
+                    margin: 5px;
+                    width: 20%;
+                    padding: 12px;
+                    height: 20%;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    
+        form {
+            display: flex;
+            justify-content: center;
+        input {
+            
+            width: 10rem;
+            align-self: center;
+            height: 2rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 1rem;
+            border: 1px solid black;
+            &:hover {
+                background: white;
+                color: black;
+                border: 1px solid black;
+            }
+        }
+        }
+    
+    }
+    }
+    .compte-div {
+        
+        margin-top: 60px;
+        width: 100%;
+        h1 {
+            text-align: center;
+        }
+      
+        .compte-produit-div {
+            height: 85%;
+            form {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                align-items: center;
+                label {
+                    padding: 0.5rem;
+                }
+                select {
+                    width: 300px;
+                    margin: 0.7rem;
+                    height: 2rem;
+                    outline: none;
+                }
+                input {
+                    width: 300px;
+                    margin: 0.7rem;
+                    height: 2rem;
+                    outline: none;
+                }
+
+                textarea{
+                    width: 300px;
+                    height: 100px;
+                    outline: none;
+                    
+                }
+
+                button {
+                    width: 200px;
+                    box-sizing: border-box;
+                    padding: 10px 0;
+                    margin-top: 30px;
+                    outline: none;
+                    border: none;
+                    background: #033d6f;
+                    color: #fff;
+                    border-radius: 2rem;
+                    font-size: 20px;
+                    transition: color 600ms;
+                    &:hover {
+                        color: #033d6f;
+                        background: white;
+                        border: 1px solid #033d6f;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .compte-historique {
+        margin-top: 60px;
+        width: 100%;
+        overflow: hidden;
+        background: #f8f6f6;
+        h3 {
+            text-align: center;
+        }
+        .compte-historique--container {
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: space-around;
+            width: 100%;
+            
+            .history-card {
+                text-align: center;
+                margin: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 23rem;
+                width: 12rem;
+                min-height: 300px;
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                transition-duration: 0.3s;
+                background: white;
+                border-radius: 8px;
+                transition-property: box-shadow, transform;
+                img {
+                    width: 100%;
+                    height: 7rem;
+                    border-radius: 8px 8px 0 0;
+
+                }
+                &:hover,&:active,&:focus {
+                    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+                    transform: scale(1.1);
+                    }
+
+                    .history-button--container {
+                        display: flex;
+                        justify-content: space-around;
+                        width: 5rem;
+                        .bin {
+                            cursor: pointer;
+                            transition: all 400ms;
+                            &:hover {
+                                transform: scale(1.4);
+                                color: red;
+                            }
+                        }
+                        .edit {
+                            cursor: pointer;
+                            transition: all 400ms;
+                            &:hover {
+                                transform: scale(1.4);
+                                color: rgb(32, 32, 146);
+                            }
+                        }
+                    }
+            }
+
+        }
+    }
+
+    .utilisateur-div {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        h3 {
+            text-align: center;
+        }
+        div {
+            margin-top: 8rem;
+        }
+    }
+}
+
+
+.succes-header {
+        
+    text-align: center;
+    color: green;
+
+}
+
+
+
+
+
+@media screen and (max-width : 741) {
+    .main-compte {
+    
+        
+    }
+}

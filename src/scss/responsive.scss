@@ -1,0 +1,7 @@
+$medium: 760px!default;
+$little: 480px!default;
+
+
+
+$phone: "only screen and (min-width: #{$little})";
+$tablet: "only screen and (min-width: #{$medium})";
