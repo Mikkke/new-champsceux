@@ -1,4 +1,4 @@
-/* import firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/storage";
 
 const firebaseConfig = {
@@ -15,4 +15,4 @@ firebase.initializeApp(firebaseConfig);
 
 const refStorage = firebase.storage().ref(`image_produitfileName`); //modif ici avec tidle et
 
-export { firebase, refStorage as default }; */
+export { firebase, refStorage as default };
