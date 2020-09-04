@@ -6,6 +6,7 @@ const Accueil = () => {
     <div className="accueil">
       <div className="text-div">
         <h2>De bons produits à petits prix</h2>
+        {console.log("yooo t'es dessus frerot")}
         <div className="btn">
           <Link to="/produits">Voir les produits</Link>
         </div>
