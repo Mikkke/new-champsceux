@@ -21,8 +21,8 @@ const schema = yup.object().shape({
   description: yup.string().required("ce champs est requis")
 });
 
-const apiBaseURL = process.env.REACT_APP_BASE_API;
-const initialUrl = `${apiBaseURL}/api/produits`;
+/* const apiBaseURL = process.env.REACT_APP_BASE_API;
+const initialUrl = `${apiBaseURL}/api/produits`; */
 
 const ProduitsCompte = props => {
   //console.log("props du produit compte :>> ", props);

@@ -17,10 +17,10 @@ const schema = yup.object().shape({
     .required("ce champs est requis")
 });
 
-const apiBaseUrl = process.env.REACT_APP_BASE_API;
+/* const apiBaseUrl = process.env.REACT_APP_BASE_API;
 const initialUrl = `${apiBaseUrl}/api/profil/login`;
 console.log("apiBaseUrl :>> ", apiBaseUrl);
-console.log("initialUrl :>> ", initialUrl);
+console.log("initialUrl :>> ", initialUrl); */
 
 // eslint-disable-next-line react/prop-types
 const Connexion = props => {
@@ -32,7 +32,10 @@ const Connexion = props => {
 
   const onSubmit = async data => {
     try {
-      const res = await axios.post(`${initialUrl}`, data);
+      const res = await axios.post(
+        `https://big-back.herokuapp.com/api/profil/login`,
+        data
+      );
       //console.log("res :>> ", res);
       //const auth = res.data.isAuthenticated;
       localStorage.setItem("auth", JSON.stringify(res.data));

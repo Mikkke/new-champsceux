@@ -4,8 +4,8 @@ import { fetchProduit } from "../../actions/fetchProduitAction";
 import Axios from "axios";
 import Modal from "../modal/Modal";
 
-const apiBaseURL = process.env.REACT_APP_BASE_API;
-const initialUrl = `${apiBaseURL}/api/produits`;
+/* const apiBaseURL = process.env.REACT_APP_BASE_API;
+const initialUrl = `${apiBaseURL}/api/produits`; */
 
 const Produits = props => {
   const { fetchProduit, produitData } = props;
@@ -21,7 +21,7 @@ const Produits = props => {
   const showModal = id => {
     setOpenModal(true);
     //console.log("id du modal :>> ", id);
-    Axios.get(`${initialUrl}/${id}`)
+    Axios.get(`https://big-back.herokuapp.com/api/produits/${id}`)
       .then(res => {
         console.log("res.data :>> ", res.data);
         setProduitInfos(res.data);
@@ -43,7 +43,7 @@ const Produits = props => {
           className="image"
           src={
             !produitInfos.photo.includes("firebasestorage.googleapis")
-              ? `${apiBaseURL}${produitInfos.photo}`
+              ? `https://big-back.herokuapp.com/api/produits${produitInfos.photo}`
               : produitInfos.photo
           }
           alt="produit"
@@ -80,7 +80,7 @@ const Produits = props => {
           /* console.log("coucou mike !!!", `${apiBaseURL}${el.photo}`);
           console.log("coucou mike !!!", `${apiBaseURL}${el.photo}`); */
           const imgSrc = !el.photo.includes("firebasestorage.googleapis")
-            ? `${apiBaseURL}${el.photo}`
+            ? `https://big-back.herokuapp.com/api/produits${el.photo}`
             : el.photo;
           return (
             <div key={index} className="my-card">
