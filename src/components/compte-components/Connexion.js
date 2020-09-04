@@ -5,7 +5,9 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { connect } from "react-redux";
 import { setCurrentUser } from "../../actions/authAction";
+import runtimeEnv from "@mars/heroku-js-runtime-env";
 
+const env = runtimeEnv();
 const schema = yup.object().shape({
   email: yup
     .string()
@@ -17,7 +19,7 @@ const schema = yup.object().shape({
     .required("ce champs est requis")
 });
 
-const apiBaseUrl = process.env.REACT_APP_BASE_API;
+const apiBaseUrl = env.REACT_APP_BASE_API;
 const initialUrl = `${apiBaseUrl}/api/profil/login`;
 console.log("apiBaseUrl :>> ", apiBaseUrl);
 console.log("initialUrl :>> ", initialUrl);
