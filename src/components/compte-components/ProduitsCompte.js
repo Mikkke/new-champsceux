@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import axios from "axios";
-//import { firebase, refStorage } from "../../firebase/Firebase";
+import { firebase, refStorage } from "../../firebase/Firebase";
 import NavCompte from "../compte-components/NavCompte";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
@@ -21,8 +21,8 @@ const schema = yup.object().shape({
   description: yup.string().required("ce champs est requis")
 });
 
-/* const apiBaseURL = process.env.REACT_APP_BASE_API;
-const initialUrl = `${apiBaseURL}/api/produits`; */
+const apiBaseURL = process.env.REACT_APP_BASE_API;
+const initialUrl = `${apiBaseURL}/api/produits`;
 
 const ProduitsCompte = props => {
   //console.log("props du produit compte :>> ", props);
@@ -44,28 +44,29 @@ const ProduitsCompte = props => {
     const formData = new FormData();
     formData.append("photo", data.photo);
  */
-    /*   console.log("data je cherche ta valeur", data.photo[0], "data");
+    console.log("data je cherche ta valeur", data.photo[0], "data");
     const refStorage = firebase.storage().ref("image" + data.photo[0].name);
-    let upload = refStorage.put(data.photo[0]); */
-    // upload.on(
-    // "state_changed",
-    //snapshot => {},
-    //error => {},
-    //async () => {
-    //const url = await upload.snapshot.ref.getDownloadURL();
-    //console.log("url :>> ", url);
-    //data.photo = url;
-    /* try {
-          const res = await axios.post(`${initialUrl}`, data); */
-    //console.log("res :>> ", res);
-    //console.log("data ici bas", res.data);
-    /*  setSuccesMessage(res.data);
+    let upload = refStorage.put(data.photo[0]);
+
+    upload.on(
+      "state_changed",
+      snapshot => {},
+      error => {},
+      async () => {
+        const url = await upload.snapshot.ref.getDownloadURL();
+        //console.log("url :>> ", url);
+        data.photo = url;
+        try {
+          const res = await axios.post(`${initialUrl}`, data);
+          //console.log("res :>> ", res);
+          //console.log("data ici bas", res.data);
+          setSuccesMessage(res.data);
         } catch (error) {
           console.error(error);
-        } */
-    // return url;
-    //}
-    //);
+        }
+        // return url;
+      }
+    );
   };
 
   const isAuth = localStorage.getItem("auth");

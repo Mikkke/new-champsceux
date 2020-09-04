@@ -7,8 +7,8 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { withRouter } from "react-router-dom";
 
-/* const apiBaseURL = process.env.REACT_APP_BASE_API;
-const initialUrl = `${apiBaseURL}/api/profil/sign-out`; */
+const apiBaseURL = process.env.REACT_APP_BASE_API;
+const initialUrl = `${apiBaseURL}/api/profil/sign-out`;
 
 const NavCompte = props => {
   //console.log("props de navcompte :>> ", props);
@@ -16,10 +16,7 @@ const NavCompte = props => {
   const { register, handleSubmit } = useForm();
   const onSubmit = async data => {
     try {
-      const res = await axios.post(
-        `https://big-back.herokuapp.com/api/profil/sign-out`,
-        data
-      );
+      const res = await axios.post(`${initialUrl}`, data);
 
       //console.log("res :>> ", res);
       //onsole.log("res.data :>> ", res.data);

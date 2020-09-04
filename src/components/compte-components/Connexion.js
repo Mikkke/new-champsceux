@@ -36,10 +36,7 @@ const Connexion = props => {
 
   const onSubmit = async data => {
     try {
-      const res = await axios.post(
-        `https://big-back.herokuapp.com/api/profil/login`,
-        data
-      );
+      const res = await axios.post(`${initialUrl}`, data);
       //console.log("res :>> ", res);
       //const auth = res.data.isAuthenticated;
       localStorage.setItem("auth", JSON.stringify(res.data));

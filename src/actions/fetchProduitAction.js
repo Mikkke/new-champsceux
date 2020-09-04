@@ -4,8 +4,8 @@ import {
   FETCH_PRODUIT_FAILURE
 } from "./types";
 import axios from "axios";
-/* const apiBaseUrl = process.env.REACT_APP_BASE_API;
-const initialUrl = `${apiBaseUrl}/api/produits`; */
+const apiBaseUrl = process.env.REACT_APP_BASE_API;
+const initialUrl = `${apiBaseUrl}/api/produits`;
 
 export const fetchProduitRequest = () => {
   return {
@@ -30,7 +30,7 @@ export const fetchProduit = () => {
   return dispatch => {
     dispatch(fetchProduitRequest());
     axios
-      .get("https://big-back.herokuapp.com/api/produits")
+      .get(initialUrl)
       .then(res => {
         const produitData = res.data;
         /* console.log("produitData :", produitData); */

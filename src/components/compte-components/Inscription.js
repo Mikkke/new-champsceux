@@ -38,8 +38,8 @@ const schema = yup.object().shape({
     .required("ce champs est requis")
 });
 
-/* const apiBaseURL = process.env.REACT_APP_BASE_API;
-const initialUrl = `${apiBaseURL}/api/profil/register`; */
+const apiBaseURL = process.env.REACT_APP_BASE_API;
+const initialUrl = `${apiBaseURL}/api/profil/register`;
 
 // eslint-disable-next-line react/prop-types
 const Inscription = ({ history }) => {
@@ -57,10 +57,7 @@ const Inscription = ({ history }) => {
     // console.log("data :>> ", data);
     if (password === confirmPassword) {
       try {
-        const res = await axios.post(
-          `https://big-back.herokuapp.com/api/profil/register`,
-          data
-        );
+        const res = await axios.post(`${initialUrl}`, data);
         //console.log("res.data.response :>> ", res.data.message);
         // eslint-disable-next-line react/prop-types
         history.push("/compte");
