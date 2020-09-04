@@ -7,7 +7,7 @@ import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
-import { firebase } from "../../firebase/Firebase";
+/* import { firebase } from "../../firebase/Firebase"; */
 
 const apiBaseURL = process.env.REACT_APP_BASE_API;
 const initialUrl = `${apiBaseURL}/api/produits`;
@@ -191,7 +191,7 @@ const Historique = ({ currentUser }) => {
     window.location.reload(false);
   };
   const updateProduct = async (id, data) => {
-    if (!data.photo[0]) {
+    /*  if (!data.photo[0]) {
       console.log("data.photo dans le if update :>> ", data.photo[0]);
       let refStorage = firebase
         .storage()
@@ -219,8 +219,8 @@ const Historique = ({ currentUser }) => {
           }
           // return url;
         }
-      );
-    } else {
+      ); */
+    /*    } else {
       try {
         const res = await axios.put(`${initialUrl}/${id}`, data);
         console.log("res :>> ", res);
@@ -231,7 +231,7 @@ const Historique = ({ currentUser }) => {
       }
     }
 
-    //window.location.reload(false);
+    //window.location.reload(false);*/
   };
 
   const isAuth = localStorage.getItem("auth");
